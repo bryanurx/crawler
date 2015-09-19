@@ -1,10 +1,11 @@
 import requests
 import re
+import sys
 from bs4 import BeautifulSoup
 
-url = 'http://www.rosesluxury.com/'
+cmdline = sys.argv[1]
 
-response = requests.get(url)
+response = requests.get(cmdline)
 
 soup = BeautifulSoup(response.text, "html.parser")
 
